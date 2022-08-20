@@ -74,7 +74,6 @@ def get_balance(address):
     eth = w3.fromWei(wei, 'ether')
     return eth
 
-# web3.py instance
 def deploy_contract(deploy_key, param1, param2):
     print("W3 connection status:")
     connection = w3.isConnected()
@@ -95,7 +94,27 @@ def deploy_contract(deploy_key, param1, param2):
     time.sleep(20) #hardcode
     tx_receipt = w3.eth.waitForTransactionReceipt(tx_hash)
     print("Contract deployed at: ", tx_receipt['contractAddress'])
-    return tx_receipt
+    return True
+
+#Create user profile
+def create_internal_profile():
+    return user_info_json
+
+#Orginizer / attendee
+def create_lens_profile():
+    return
+
+#Create event
+def create_lens_post():
+    #Staking a guarantee is a future option
+    
+    return
+
+def collect_NFT():
+
+    #Reference Module would ensure you can't participate in the community unless you have collect NFT
+    return
+
 
 
 
